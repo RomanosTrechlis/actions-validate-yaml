@@ -1,8 +1,9 @@
-#!/bin/sh
-
+#!/bin/bash
 set -eux
 
-echo "${INPUT_SCHEMA}"
-echo "${INPUT_DATA}"
-
-./validate-yaml -schema="${INPUT_SCHEMA}" "${INPUT_DATA}"
+readarray -t strarr <<< "${INPUT_DATA}"
+for file in "${strarr[@]}"
+do
+  echo "Checking ${file}..."
+  /action/validate-yaml -schema="${INPUT_SCHEMA}" "${file}"
+done

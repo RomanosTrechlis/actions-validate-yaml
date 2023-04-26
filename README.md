@@ -32,5 +32,7 @@ jobs:
       - uses: RomanosTrechlis/actions-validate-yaml@master
         with:
           schema: spec.json
-          data: data.yml
+          data: |-
+            file1.yml
+            file2.yml
 ```
