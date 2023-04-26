@@ -1,0 +1,21 @@
+# action.yaml
+name: 'actions-validate-yaml'
+description: 'GitHub Action to validate yaml files using https://github.com/gerald1248/validate-yaml'
+author: 'Romanos Trechlis'
+branding:
+  color: 'blue'
+  icon: 'package'
+
+inputs:
+  schema:
+    description: "JSON or YAML schema"
+    required: true
+  data:
+    description: "JSON or YAML files to validate"
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.schema }}
+    - ${{ inputs.data }}
