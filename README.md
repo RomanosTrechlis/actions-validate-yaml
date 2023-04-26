@@ -36,3 +36,11 @@ jobs:
             file1.yml
             file2.yml
 ```
+
+## Input variables
+
+There are two input for this action:
+
+1. schema: is the schema specification in .json or .yaml file
+2. data: a string of multiple files to validate separated by new line
+
