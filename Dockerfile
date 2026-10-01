@@ -1,6 +1,6 @@
-FROM debian:11.6-slim
+FROM debian:12-slim
 
-MAINTAINER Romanos Trechlis <r.trechlis@gmail.com>
+LABEL maintainer="Romanos Trechlis <r.trechlis@gmail.com>"
 
 WORKDIR /action
 
